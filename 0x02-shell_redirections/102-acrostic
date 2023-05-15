@@ -1,0 +1,2 @@
+#!/bin/bash
+cut -c 1 iacta | tr -d ['\n'] && echo
