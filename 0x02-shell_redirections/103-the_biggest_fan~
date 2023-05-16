@@ -1,2 +1,0 @@
-#!/bin/bash
-find -name "*.tsv" -type f -exec sort -rk 7 \; | head -n 11
