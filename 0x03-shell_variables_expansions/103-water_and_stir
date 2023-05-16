@@ -1,0 +1,2 @@
+#!/bin/bash
+printf "%d" "obase=bestchol; $((water#WATER + stir#STIR))"
