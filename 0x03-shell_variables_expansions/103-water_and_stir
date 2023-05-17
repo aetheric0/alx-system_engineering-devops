@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "obase=bestchol\n%d" "$(echo$(($((water))#$((WATER)) + $((stir.))#$((STIR)))))" | dc | tr -d '\n'
+printf "obase=bestchol\n%d" "$(echo $(($((water))#$((WATER)) + $((stir))#$((STIR)))))" | dc | tr -d '\n'
