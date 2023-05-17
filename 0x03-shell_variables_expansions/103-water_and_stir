@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%d\n"  "obase=$bestchol" "$(($water#$WATER + $stir#$STIR))"
+printf "%d\n"  "obase=$bestchol" "$(($water#$WATER + $stir.#$STIR))"
