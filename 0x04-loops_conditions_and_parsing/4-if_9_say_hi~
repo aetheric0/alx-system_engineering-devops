@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Prints `Best School` 10 times, but on the 9th time prints Hi instead
+i=0
+while [ i -lt 10 ];
+do
+    if (( $i == 8 ));
+    then
+	echo "Hi"
+    else
+	echo "Best School"
+    fi
+    ((i = i + 1))
+done
