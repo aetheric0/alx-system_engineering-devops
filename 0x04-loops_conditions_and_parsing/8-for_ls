@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Formats content of the current directory by printing part of name after '-'
-for i in $(ls);
+for i in *;
 do
-    echo "$i" | cut -d '-' -f 2-;
+    if [[ $i != .* ]]
+    then
+	echo "$i" | cut -d '-' -f 2-;
+    fi
 done
