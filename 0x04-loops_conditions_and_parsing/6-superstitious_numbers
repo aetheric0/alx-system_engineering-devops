@@ -13,6 +13,7 @@ do
 	      echo "bad luck from Japan"
 	      ;;
 	  17)
+	      echo "$i"
 	      echo "bad luck from Italy"
 	      ;;
 	  *)
