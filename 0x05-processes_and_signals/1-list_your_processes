@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# list all the current active processes
+top
