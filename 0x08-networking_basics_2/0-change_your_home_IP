@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configures the localhost and facebook IP address
+
+cp /etc/hosts ~/ex_hosts
+{
+    echo -e "\n127.0.0.2\tlocalhost"
+    echo -e "\n8.8.8.8\tfacebook.com"
+} >> ~/ex_hosts
+cat ~/ex_hosts > /etc/hosts
