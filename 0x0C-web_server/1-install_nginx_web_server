@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Script to install nginx and configure the root index file
 apt install nginx -y
+nginx -s reload
 echo "Hello World!" > /var/www/html/index.html
