@@ -2,4 +2,5 @@
 # Script to install nginx and configure the root index file
 apt install nginx -y
 nginx -s reload
+rm /var/www/html/index.nginx-debian.html
 echo "Hello World!" > /var/www/html/index.html
