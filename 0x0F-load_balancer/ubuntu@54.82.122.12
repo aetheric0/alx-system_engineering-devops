@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Installs load balancer
+apt-get-update
+apt-get install --no-install-recommends software-properties-common -y
+apt-repository ppa:vbernat/haproxy-2.8 -y
+apt-get install haproxy=2.8\* -y
+
+# Checks if the frontend already exists
+if ! grep -q "frontend" /etc/haproxy/haproxy.cfg; then
+    cat << EOF >> /etc/haproxy/haproxy.cfg
+frontend myfrontend
+  mode http
+  bind :80
+  default_backend web_servers
+EOF
+fi
+
+# Checks if the backend already exists
+if ! grep -q "backend" /etc/haproxy/haproxy.cfg; then
+    cat << EOF >> /etc/haproxy/haproxy.cfg
+backend web_servers
+  mode http
+  balance roundrobin
+  server 327114-web-01 3.84.168.250:80 check
+  server 327114-web-02 54.87.172.213:80 check
+EOF
+fi
+
+service haproxy restart
