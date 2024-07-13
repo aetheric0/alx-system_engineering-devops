@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configures a server and a default header response
+apt update
+header_name="X-served-By"
+hostname=$(hostname)
+apt install nginx -y
+nginx -s reload
+sed -i "/http {/a \    add_header $header_name $hostname;" /etc/nginx/nginx.conf
+nginx -s reload
