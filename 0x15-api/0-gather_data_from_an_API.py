@@ -11,15 +11,15 @@ if __name__ == '__main__':
     not_completed = 0
     completed = 0
     user_response = request('get',
-        'https://jsonplaceholder.typicode.com/users?id={}'
-        .format(argv[1]))
+                            'https://jsonplaceholder.typicode.com/users?id={}'
+                            .format(argv[1]))
     todo_response = request(
         'get', 'https://jsonplaceholder.typicode.com/todos')
     employee = user_response.json()
     todo = todo_response.json()
     for item in todo:
         if item['userId'] == int(argv[1]):
-            if item['completed'] == False:
+            if item['completed'] is False:
                 not_completed += 1
             else:
                 completed += 1
