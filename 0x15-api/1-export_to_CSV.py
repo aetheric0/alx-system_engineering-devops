@@ -4,7 +4,6 @@
 
 from requests import request
 from sys import argv
-import csv
 
 
 if __name__ == '__main__':
